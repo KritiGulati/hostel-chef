@@ -1,0 +1,362 @@
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #f8a100 100%);
+  color: var(--dark-color);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .page-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  
+  .how-it-works-detailed {
+    padding-top: 60px;
+  }
+  
+  .process-timeline {
+    position: relative;
+  }
+  
+  .process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .process-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .process-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+  
+  .process-content {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .process-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+  }
+  
+  .process-description {
+    color: var(--gray-color);
+    margin-bottom: 20px;
+  }
+  
+  .process-image {
+    margin: 20px 0;
+  }
+  
+  .process-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  
+  .subscription-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .subscription-tier {
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+  
+  .subscription-tier h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+  }
+  
+  .subscription-tier .price {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--secondary-color);
+  }
+  
+  .ai-features, .pickup-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .ai-feature, .pickup-option {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: var(--border-radius);
+  }
+  
+  .ai-feature i, .pickup-option i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .ai-feature h4, .pickup-option h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Add these CSS rules to your HowItWorksPage.css file */
+
+  /* Rewards Program Styling */
+  .rewards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .reward-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .reward-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .reward-points {
+    display: inline-block;
+    background-color: #4e5de4;
+    color: white;
+    font-weight: bold;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  .reward-item p {
+    margin: 0.5rem 0 0 0;
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .rewards-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rewards-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .reward-item {
+      text-align: center;
+    }
+  }
+  
+  .kiosk-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .kiosk-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .kiosk-description {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+  }
+  
+  .kiosk-subtitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+  }
+  
+  .kiosk-features {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  .kiosk-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .kiosk-features i {
+    color: var(--success-color);
+    margin-right: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .kiosk-locations {
+    background-color: #f9fafb;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+  }
+  
+  .kiosk-locations h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .tech-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  .tech-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .tech-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .tech-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+  }
+  
+  .tech-description {
+    color: var(--gray-color);
+  }
+  
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .faq-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+  }
+  
+  .faq-answer {
+    color: var(--gray-color);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .btn-lg {
+    padding: 12px 25px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .subscription-tiers,
+    .ai-features,
+    .pickup-options,
+    .tech-grid,
+    .faq-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .kiosk-content {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .page-title {
+      font-size: 2.5rem;
+    }
+    
+    .process-item {
+      padding-left: 60px;
+    }
+    
+    .subscription-tiers,
+    .ai-features,
+    .pickup-options,
+    .tech-grid,
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .icon-spacing {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  

@@ -1,0 +1,770 @@
+.meal-plans-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #f8a100 100%);
+  color: var(--dark-color);
+    padding: 80px 0;
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  .meal-plans-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .meal-plans-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .meal-plans-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .meal-plans-tabs {
+    background-color: var(--light-color);
+  }
+  
+  .tabs-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    padding: 15px 25px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+    color: var(--gray-color);
+  }
+  
+  .tab:hover {
+    color: var(--primary-color);
+  }
+  
+  .tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+  }
+  
+  .tab i {
+    font-size: 1.2rem;
+  }
+  
+  .tab-content {
+    padding: 20px 0 40px;
+  }
+  
+  .tab-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: var(--gray-color);
+  }
+  
+  /* Subscription Plans Styles */
+  .plans-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .plan-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    position: relative;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan-card.selected {
+    border-color: var(--primary-color);
+  }
+  
+  .plan-card.popular {
+    border-color: var(--primary-color);
+  }
+  
+  .plan-card.premium {
+    border-color: var(--secondary-color);
+  }
+  
+  .plan-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .plan-card.premium .plan-tag {
+    background-color: var(--secondary-color);
+  }
+  
+  .plan-header {
+    padding: 30px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .plan-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+  }
+  
+  .plan-price {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .plan-card.premium .plan-price {
+    color: var(--secondary-color);
+  }
+  
+  .price-period {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gray-color);
+  }
+  
+  .plan-features {
+    padding: 20px;
+  }
+  
+  .plan-features ul {
+    list-style: none;
+  }
+  
+  .plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .plan-features li:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+  
+  .plan-card.premium .plan-features li:before {
+    color: var(--secondary-color);
+  }
+  
+  .plan-footer {
+    padding: 20px;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .compare-plans-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .compare-plans-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .compare-plans-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* Customize Meals Styles */
+  .customization-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .preferences-section h3,
+  .meal-recommendations h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .preference-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+  }
+  
+  .preference-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .preference-card.active {
+    border-color: var(--primary-color);
+    background-color: rgba(var(--primary-rgb), 0.05);
+  }
+  
+  .preference-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .preference-card h4 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .meal-recommendation-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .meal-recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-recommendation-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .meal-recommendation-card h4 {
+    padding: 15px 15px 5px;
+    font-size: 1.2rem;
+  }
+  
+  .meal-recommendation-card p {
+    padding: 0 15px 15px;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+  }
+  
+  .meal-tags {
+    padding: 0 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .meal-tag {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .empty-recommendations {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .empty-recommendations i {
+    font-size: 3rem;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+  }
+  
+  .custom-ai-section {
+    margin-top: 20px;
+  }
+  
+  .ai-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #f8a100 100%);
+  color: var(--dark-color);
+    color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+  
+  .ai-content {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .ai-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ai-content p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+  
+  /* Pickup Locations Styles */
+  .locations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .location-map {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .location-map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .map-overlay p {
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .locations-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .location-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+    transition: var(--transition);
+  }
+  
+  .location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .location-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+  }
+  
+  .location-details {
+    flex-grow: 1;
+  }
+  
+  .location-details h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .location-details p {
+    color: var(--gray-color);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .location-hours {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dark-color) !important;
+    font-weight: 500;
+  }
+  
+  .location-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .location-feature {
+    background-color: var(--light-color);
+    color: var(--gray-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .location-notice {
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .notice-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+  }
+  
+  .notice-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .notice-content p {
+    margin-bottom: 15px;
+  }
+  
+  /* FAQ Styles */
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+  
+  .faq-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-question h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  .faq-answer {
+    padding: 0 20px 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .more-questions {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .more-questions h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* CTA Section Styles */
+  .cta-section {
+    background-color: white;
+  }
+  
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .cta-content p {
+    color: var(--gray-color);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .cta-stats {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .cta-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .stat-label {
+    color: var(--gray-color);
+  }
+  
+  .cta-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .plans-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .cta-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-image {
+      order: -1;
+    }
+    
+    .meal-plans-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .plans-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .tab {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .tabs-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+    
+    .meal-plans-hero {
+      padding: 60px 0;
+    }
+    
+    .meal-plans-title {
+      font-size: 2rem;
+    }
+    
+    .meal-plans-subtitle {
+      font-size: 1rem;
+    }
+    
+    .cta-stats {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section {
+      padding: 40px 0;
+    }
+    
+    .section-title {
+      font-size: 1.8rem;
+    }
+    
+    .location-card {
+      flex-direction: column;
+    }
+    
+    .location-icon {
+      margin-bottom: 15px;
+    }
+    
+    .location-notice {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .notice-icon {
+      margin-bottom: 15px;
+    }
+    
+    .compare-plans-buttons {
+      flex-direction: column;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+
+/* Add these styles to your MealPlansPage.css file */
+
+/* Mobile-friendly tabs for smaller screens */
+@media screen and (max-width: 768px) {
+  .tabs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow: visible;
+    padding: 0;
+  }
+  
+  .tab {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .tab-icon {
+    margin-bottom: 8px;
+    margin-right: 0;
+    font-size: 1.5rem;
+  }
+  
+  .tab span {
+    display: block;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+  
+  /* Improved mobile layout for other sections */
+  .plan-card {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  
+  .plans-container {
+    display: block;
+  }
+  
+  .preferences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .locations-list {
+    margin-top: 20px;
+  }
+  
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-image {
+    display: none;
+  }
+}
+
+/* For even smaller screens (mobile phones) */
+@media screen and (max-width: 480px) {
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .compare-plans-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .compare-plans-buttons button {
+    width: 100%;
+  }
+}

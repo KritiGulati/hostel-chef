@@ -1,0 +1,654 @@
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #f8a100 100%);
+  color: var(--dark-color);
+    padding: 80px 0;
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  .about-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .section {
+    padding: 80px 0;
+  }
+  
+  .bg-light {
+    background-color: var(--light-color);
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    max-width: 800px;
+    margin: 0 auto 50px;
+  }
+  
+  /* Our Story Section */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .story-content {
+    max-width: 600px;
+  }
+  
+  .story-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--gray-color);
+    margin-bottom: 20px;
+  }
+  
+  .story-stats {
+    display: flex;
+    margin-top: 40px;
+    gap: 40px;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+  }
+  
+  .stat-label {
+    color: var(--gray-color);
+    font-size: 1rem;
+  }
+  
+  .story-image {
+    position: relative;
+  }
+  
+  .story-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .image-caption {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  /* Mission & Values Section */
+  .mission-header {
+    margin-bottom: 50px;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .value-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .value-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+    text-align: center;
+  }
+  
+  .value-card p {
+    color: var(--gray-color);
+    line-height: 1.6;
+  }
+  
+  /* How It Works Section */
+  .process-steps {
+    max-width: 800px;
+    margin: 0 auto 50px;
+  }
+  
+  .process-step {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .process-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    height: calc(100% - 10px);
+    width: 2px;
+    background-color: var(--light-color);
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+  
+  .step-content {
+    padding-top: 5px;
+  }
+  
+  .step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+  }
+  
+  .step-content p {
+    color: var(--gray-color);
+    line-height: 1.6;
+  }
+  
+  .process-cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .process-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+  }
+  
+  /* Team Section */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .team-member {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .member-image {
+    overflow: hidden;
+  }
+  
+  .member-image img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .team-member:hover .member-image img {
+    transform: scale(1.05);
+  }
+  
+  .member-name {
+    padding: 20px 20px 5px;
+    font-size: 1.2rem;
+  }
+  
+  .member-role {
+    padding: 0 20px;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .member-bio {
+    padding: 0 20px 20px;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .member-social {
+    display: flex;
+    padding: 0 20px 20px;
+    gap: 15px;
+  }
+  
+  .member-social a {
+    color: var(--gray-color);
+    transition: var(--transition);
+  }
+  
+  .member-social a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Testimonials Section */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .testimonial-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonial-card.featured {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .testimonial-rating {
+    margin-bottom: 20px;
+    color: #FFD700;
+  }
+  
+  .testimonial-card.featured .testimonial-rating {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .testimonial-text {
+    flex-grow: 1;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .testimonial-card.featured .testimonial-text {
+    color: white;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+  }
+  
+  .testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .author-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .author-info p {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+  }
+  
+  .testimonial-card.featured .author-info p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Partners Section */
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .partner-logo {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+  }
+  
+  .partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .partner-logo img {
+    max-width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--transition);
+  }
+  
+  .partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  
+  /* Impact Section */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .impact-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--gray-color);
+    margin-bottom: 40px;
+  }
+  
+  .impact-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .impact-stat {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+  }
+  
+  .impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+  }
+  
+  .impact-stat .stat-number {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .impact-stat .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .impact-image img {
+    width: 100%;
+    height: 700px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: var(--light-color);
+  }
+  
+  .cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Responsive Styles - Add these at the end of your existing CSS */
+
+/* Responsive Styles - Add these at the end of your existing CSS */
+
+/* Tablet Styles (max-width: 992px) */
+@media screen and (max-width: 992px) {
+  /* General Responsive Adjustments */
+  .section {
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* Story Section Responsive */
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .story-content {
+    max-width: 100%;
+  }
+  
+  /* Values Section Responsive */
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Center icons */
+  .value-icon {
+    text-align: center;
+    display: block;
+  }
+  
+  /* Team Section Responsive */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Testimonials Section Responsive */
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Partners Section Responsive */
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Impact Section Responsive */
+  .impact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* General Responsive Adjustments */
+  .section {
+    padding: 40px 0;
+  }
+  
+  .about-hero {
+    padding: 60px 0;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  /* Values Section Responsive */
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* How It Works Section Responsive */
+  .process-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .step-number {
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  
+  .process-step:not(:last-child):after {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+    height: calc(100% - 50px);
+  }
+  
+  /* Stats in about section centered */
+  .story-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Team Section Responsive */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Testimonials Section Responsive */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Partners Section Responsive */
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* CTA Section Responsive */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Small Mobile Styles (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Stat Items Responsive */
+  .story-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Partners Section Responsive */
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Impact Stats Responsive */
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Center stat icons */
+  .stat-icon {
+    text-align: center;
+    display: block;
+  }
+  
+  /* Process Steps Enhanced Responsive */
+  .process-step:not(:last-child):after {
+    height: calc(100% - 40px);
+  }
+}
